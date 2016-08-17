@@ -1,0 +1,33 @@
+@import "simple-sidebar";
+
+html, body, .scroll-elements {
+	height: 100%;
+	overflow: scroll;
+}
+
+.sidebar-nav > li {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.collapse-container {
+	display: block;
+}
+.ss-accordian-button-container {
+
+}
+
+.ss-accordian-button {
+
+}
+
+.ss-partial-container {
+	width: 960px;
+	padding: 80px;
+	margin: 0 auto;
+	display: block;
+}
+.ss-content {
+	width: 100%;
+	display: block;
+}
