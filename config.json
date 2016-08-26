@@ -1,0 +1,223 @@
+{
+	"menu" : [
+		{
+			"name" : "Overview",
+			"children" : [
+				"Introduction",
+				"Code-guidelines"
+			]
+		},
+		{
+			"name" : "Design",
+			"children" : [
+				"Animation",
+				"Border-radius",
+				"Box-shadow",
+				"Color-scheme",
+				"Icons",
+				"Layout",
+				"Typography"
+			]
+		},
+		{
+			"name" : "Components",
+			"children" : [
+				"Avatars",
+				"Buttons",
+				"Form-elements",
+				"Grid",
+				"Links",
+				"Lists",
+				"Modals",
+				"Popups"
+			]
+		},
+		{
+			"name" : "Utility",
+			"children" : [
+				"Aspect-ratio",
+				"Center-elements",
+				"Hide-elements",
+				"Layouts",
+				"Text-manipulation"
+			]
+		}
+	],
+	"colors" :{
+		"brandColors" : {
+			"aqua" : {
+				"light aqua" : {
+					"hex" : "#48C0EB",
+					"rgb" : "72, 192, 235",
+					"color" : "#F5F7FA"
+				},
+				"aqua" : {
+					"hex" : "#33AEDC",
+					"rgb" : "51, 174, 220",
+					"color" : "#F5F7FA"
+				},
+				"dark aqua" : {
+					"hex" : "#109BC6",
+					"rgb" : "16, 155, 198",
+					"color" : "#F5F7FA"
+				}
+			},
+			"grass" : {
+				"light grass" : {
+					"hex" : "#B1E271",
+					"rgb" : "177, 226, 113",
+					"color" : "#F5F7FA"
+				},
+				"grass" : {
+					"hex" : "#9FD661",
+					"rgb" : "159, 214, 97",
+					"color" : "#F5F7FA"
+				},
+				"dark grass" : {
+					"hex" : "#8BC34A",
+					"rgb" : "139, 195, 74",
+					"color" : "#F5F7FA"
+				}
+			},
+			"sunflower" : {
+				"light sunflower" : {
+					"hex" : "#FFDB80",
+					"rgb" : "255, 219, 128",
+					"color" : "#F5F7FA"
+				},
+				"sunflower" : {
+					"hex" : "#FFCF47",
+					"rgb" : "255, 207, 71",
+					"color" : "#F5F7FA"
+				},
+				"dark sunflower" : {
+					"hex" : "#F7BC31",
+					"rgb" : "247, 188, 49",
+					"color" : "#F5F7FA"
+				}
+			},
+			"plum" : {
+				"light plum" : {
+					"hex" : "#917EC4",
+					"rgb" : "145, 126, 196",
+					"color" : "#F5F7FA"
+				},
+				"plum" : {
+					"hex" : "#8065B9",
+					"rgb" : "128, 101, 185",
+					"color" : "#F5F7FA"
+				},
+				"dark plum" : {
+					"hex" : "#6A4DA9",
+					"rgb" : "106, 77, 169",
+					"color" : "#F5F7FA"
+				}
+			},
+			"grapefruit" : {
+				"light grapefruit" : {
+					"hex" : "#F2798B",
+					"rgb" : "242, 121, 139",
+					"color" : "#F5F7FA"
+				},
+				"grapefruit" : {
+					"hex" : "#ED5565",
+					"rgb" : "237, 85, 101",
+					"color" : "#F5F7FA"
+				},
+				"dark grapefruit" : {
+					"hex" : "#DC4250",
+					"rgb" : "220, 66, 80",
+					"color" : "#F5F7FA"
+				}
+			}
+		},
+		"neutralColors" : {
+			"charcoal" : {
+				"light charcoal" : {
+					"hex" : "#555555",
+					"rgb" : "85, 85, 85",
+					"color" : "#F5F7FA"
+				},
+				"charcoal" : {
+					"hex" : "#474747",
+					"rgb" : "71, 71, 71",
+					"color" : "#F5F7FA"
+				},
+				"dark charcoal" : {
+					"hex" : "#3C3B3D",
+					"rgb" : "60, 59, 61",
+					"color" : "#F5F7FA"
+				}
+			},
+			"silver" : {
+				"light silver" : {
+					"hex" : "#9D9D9E",
+					"rgb" : "157, 157, 158",
+					"color" : "#F5F7FA"
+				},
+				"silver" : {
+					"hex" : "#898B8C",
+					"rgb" : "137, 139, 140",
+					"color" : "#F5F7FA"
+				},
+				"dark silver" : {
+					"hex" : "#78797A",
+					"rgb" : "120, 121, 122",
+					"color" : "#F5F7FA"
+				}
+			},
+			"pewter" : {
+				"light pewter" : {
+					"hex" : "#CCD1D9",
+					"rgb" : "204, 209, 217",
+					"color" : "#F5F7FA"
+				},
+				"pewter" : {
+					"hex" : "#AAB2BE",
+					"rgb" : "170, 178, 190",
+					"color" : "#F5F7FA"
+				},
+				"dark pewter" : {
+					"hex" : "#99A1AA",
+					"rgb" : "153, 161, 170",
+					"color" : "#F5F7FA"
+				}
+			},
+			"fog" : {
+				"light fog" : {
+					"hex" : "#F5F7FA",
+					"rgb" : "245, 247, 250",
+					"color" : "#3C3B3D"
+				},
+				"fog" : {
+					"hex" : "#E6E9ED",
+					"rgb" : "230, 233, 237",
+					"color" : "#3C3B3D"
+				},
+				"dark fog" : {
+					"hex" : "#DCE1E5",
+					"rgb" : "220, 225, 229",
+					"color" : "#3C3B3D"
+				}
+			}
+		},
+		"uiColors" : {
+			"default" : {
+				"name" : "aqua",
+				"hex" : "#33AEDC"
+			},
+			"positive" : {
+				"name" : "grass",
+				"hex" : "#9FD661"
+			},
+			"negative" : {
+				"name" : "grapefruit",
+				"hex" : "#ED5565"
+			},
+			"warning" : {
+				"name" : "sunflower",
+				"hex" : "#FFCF47"
+			}
+		}
+	}
+}

@@ -1,71 +1,40 @@
 var ssApp = angular.module('ssApp', ['ui.router', 'ngAnimate']);
 
-
-
 ssApp.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
 	$locationProvider.html5Mode(true);
-	// $stateProvider
-	// .state('introduction', {
-	// 	url: '/introduction',
-	// 	templateUrl: 'partials/introduction',
-	// 	controller: function() {}
-	// })
-	// .state('buttons', {
-	// 	url: '/buttons',
-	// 	templateUrl: 'partials/buttons',
-	// 	controller: function() {
-	// 		highlightCode();
-	// 	}
-	// });
-	var pages = [
-		'introduction',
-		'code-guidelines',
-		'color-scheme',
-		'typography',
-		'animation',
-		'border-radius',
-		'box-shadow',
-		'layout',
-		'icon',
-		'avatars',
-		'buttons',
-		'form-elements',
-		'grid',
-		'links',
-		'lists',
-		'modals',
-		'popovers',
-		'aspect-ratio',
-		'center-elements',
-		'hide-elements',
-		'layouts',
-		'text-manipulation'
-	];
+	var pages = [];
+	menu.forEach(function(e) {
+		e.children.forEach(function(child){
+			pages.push(e.name + '/' + child);
+		});
+	});
 	angular.forEach(pages, function(e){
-		console.log(e);
 		$stateProvider
-		.state(e, {
-			url: '/'+e,
-			templateUrl: 'partials/'+e,
+		.state(e.split('/')[1].toLowerCase(), {
+			url: '/' + e.toLowerCase(),
+			templateUrl: 'partials/' + e.toLowerCase(),
 			controller: function($scope) {
 				highlightCode();
 			}
 		});
-		console.log(e);
 	});
-	$urlRouterProvider.otherwise('/introduction');
+	$urlRouterProvider.otherwise('/overview/introduction');
 });
 
 
 
 ssApp.controller('MainController', function($scope) {
-
+	$scope.menu = menu;
+	$scope.menuItems = menuItems;
+	$scope.testFunction = function(){
+		console.log('test');
+	};
 });
 
 
 
 function highlightCode() {
-	$('pre code').each(function(i, block) {
+	$('pre.sm-code').each(function(i, block) {
 		hljs.highlightBlock(block);
 	});
 }

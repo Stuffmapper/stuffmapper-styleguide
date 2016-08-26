@@ -1,0 +1,59 @@
+-
+	var brandColors = colors.brandColors;
+	var neutralColors = colors.neutralColors;
+	var uiColors = colors.uiColors;
+	var style = '';
+	Object.keys(brandColors).forEach(function(e) {
+		Object.keys(brandColors[e]).forEach(function(f) {
+			style+=('.ss-bg-color-' + f.replace(' ','-')+'{background-color:'+brandColors[e][f].hex+';color:'+brandColors[e][f].color+'}');
+		});
+	});
+	Object.keys(neutralColors).forEach(function(e) {
+		Object.keys(neutralColors[e]).forEach(function(f) {
+			style+=('.ss-bg-color-' + f.replace(' ','-')+'{background-color:'+neutralColors[e][f].hex+';color:'+neutralColors[e][f].color+'}');
+		});
+	});
+style= style
+style.
+	.ss-color-scheme-container {
+		width: 100%;
+		display: inline-block;
+		margin-bottom: 40px;
+	}
+	.ss-color-container {
+		padding: 5px;
+	}
+.ss-partial-container
+	.ss-content
+		h1.ss-page-title Color Scheme
+		#brand-colors.row
+			h3.ss-demo-title Brand Colors
+			p.ss-demo-description These are our brand colors.  We will talk more about these later.
+			- each color in Object.keys(brandColors)
+				.col-md-3
+					.ss-color-scheme-container
+						- each subColor in Object.keys(brandColors[color])
+							.ss-color-container(class= "ss-bg-color-"+subColor.replace(' ','-'))
+								.ss-color-scheme-hex= brandColors[color][subColor].hex
+								.ss-color-scheme-rgb= brandColors[color][subColor].rgb
+								.ss-color-scheme-name= subColor
+		#neutral-colors.row
+			h3.ss-demo-title Neutral Colors
+			p.ss-demo-description These are our neutral colors.  We will talk more about these later.
+			- each color in Object.keys(neutralColors)
+				.col-md-3
+					.ss-color-scheme-container
+						- each subColor in Object.keys(neutralColors[color])
+							.ss-color-container(class= "ss-bg-color-"+subColor.replace(' ','-'))
+								.ss-color-scheme-hex= neutralColors[color][subColor].hex
+								.ss-color-scheme-rgb= neutralColors[color][subColor].rgb
+								.ss-color-scheme-name= subColor
+		#ui-colors.row
+			h3.ss-demo-title UI Colors
+			p.ss-demo-description These are our ui colors.  We will talk more about these later.
+			- each color in Object.keys(uiColors)
+				.col-md-3
+					.ss-color-container(class= "ss-bg-color-"+uiColors[color].name)
+						.ss-color-scheme-global-name= color
+						.ss-color-scheme-global-color= uiColors[color].name
+					

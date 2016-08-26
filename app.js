@@ -5,12 +5,16 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sassMiddleware = require('node-sass-middleware');
-
-
-var routes = require('./routes/index');
-var users = require('./routes/users');
-
+var fs = require('fs');
 var app = express();
+var config = require('./config');
+var menu = config.menu;
+var partials = [];
+menu.forEach(function(e) {
+	e.children.forEach(function(child){
+		partials.push(e.name + '/' + child);
+	});
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,38 +38,20 @@ app.use('/css', sassMiddleware({
 	force: true
 }));
 
-app.get('/partials/:partial', function(req, res, next){
+app.get('/partials/:partial/:page', function(req, res, next){
 	var renderPartial = '';
-	[
-		'introduction',
-		'code-guidelines',
-		'color-scheme',
-		'typography',
-		'animation',
-		'border-radius',
-		'box-shadow',
-		'layout',
-		'icon',
-		'avatars',
-		'buttons',
-		'form-elements',
-		'grid',
-		'links',
-		'lists',
-		'modals',
-		'popovers',
-		'aspect-ratio',
-		'center-elements',
-		'hide-elements',
-		'layout',
-		'text-manipulation'
-	].forEach(function(e) {
-		if((e === req.params.partial) > -1) return (renderPartial = 'partials/' + req.params.partial);
+	var params = {};
+	partials.forEach(function(e) {
+		if((e.toLowerCase() === (req.params.partial + '/' + req.params.page).toLowerCase()) > -1) return (renderPartial = 'partials/styleguide-navigation/' + (req.params.partial + '/' + req.params.page));
 	});
 	if(!renderPartial) return next();
-	res.render(renderPartial);
+	if(renderPartial === 'partials/styleguide-navigation/design/color-scheme') params.colors = config.colors;
+	res.render(renderPartial, params);
 });
-app.use('*', routes);
+app.use('*', function(req, res, next) {
+	res.render('index', { menu:JSON.stringify(menu) });
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -98,5 +84,18 @@ app.use(function(err, req, res, next) {
 	});
 });
 
-
 module.exports = app;
+
+
+
+function getDirectories(srcpath) {
+	return getFD(srcpath, true);
+}
+function getFiles(srcpath) {
+	return getFD(srcpath, false);
+}
+function getFD(srcpath, dir) {
+	return fs.readdirSync(srcpath).filter(function(file) {
+		return fs.statSync(path.join(srcpath, file))[dir?'isDirectory':'isFile']();
+	});
+}
