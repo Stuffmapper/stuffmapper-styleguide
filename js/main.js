@@ -34,7 +34,7 @@ ssApp.controller('MainController', function($scope) {
 
 
 function highlightCode() {
-	$('pre.sm-code').each(function(i, block) {
-		hljs.highlightBlock(block);
-	});
+	// $('pre.sm-code').each(function(i, block) {
+	// 	hljs.highlightBlock(block);
+	// });
 }

@@ -279,6 +279,10 @@
 	height: 100%;
 	background-color: $fog-dark;
 }
+.sm-text-input-button-icon {
+	text-align: center;
+	width: 100%;
+}
 .sm-text-input-button-active .sm-text-input-button-border {
 	background-color: $aqua-light;
 }
@@ -287,6 +291,15 @@
 	color: #ffffff;
 	cursor: pointer;
 }
+
+
+/* FORM ELEMENTS CUSTOM STUFF - START */
+.sm-text-input-give-stuff {
+	width: calc(100% - 20px);
+	display: block;
+	margin: 10px auto;
+}
+/* FORM ELEMENTS CUSTOM STUFF -  END  */
 /* FORM ELEMENTS -  END  */
 
 /* TYPOGRAPHY - START */
@@ -339,7 +352,7 @@
 	top: 0px;
 	left:0px;
 	pointer-events: all;
-	&.hidden {
+	&.sm-hidden {
 		pointer-events: none;
 		opacity: 0.0001;
 	}
@@ -353,8 +366,6 @@
 
 /* FILTER - START */
 
-
-
 .filter-content-container {
 	position: absolute;
 	top: 0px;
@@ -364,7 +375,7 @@
 	pointer-events: all;
 	background-color: #ffffff;
 	transform: translate3d(0px, 0%, 0px);
-	&.hidden {
+	&.sm-hidden {
 		pointer-events: none;
 		transform: translate3d(0px, -100%, 0px);
 	}
