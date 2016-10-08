@@ -173,7 +173,7 @@ var element_directives = {
 		template: [
 			'<div class="sm-select fa fa-chevron-down {{fullWidth===\'true\'?\'sm-select-full-width\':\'\'}}">',
 			'    <select ng-model="selectModel" ng-options="v.value as v.name for v in options track by v.value">',
-			'        <option value="" selected="selected">{{placeholder}}</option>',
+			'        <option value="" disabled selected>{{placeholder}}</option>',
 			'    </select>',
 			'</div>',
 		].join('\n')
