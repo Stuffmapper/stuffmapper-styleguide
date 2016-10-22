@@ -12,7 +12,7 @@ ssApp.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
 		$stateProvider
 		.state(e.split('/')[1].toLowerCase(), {
 			url: '/' + e.toLowerCase(),
-			templateUrl: 'partials/' + e.toLowerCase(),
+			templateUrl: '/styleguide/partials/' + e.toLowerCase(),
 			controller: function($scope) {
 				highlightCode();
 			}
