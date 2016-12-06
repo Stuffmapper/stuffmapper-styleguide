@@ -5,23 +5,23 @@
 			ss-demo-container-upper
 				.row
 					.col-md-6
-						center
+						.ss-center
 							input.sm-text-input.sm-text-input-xl(placeholder="placeholder text")
 					.ss-demo-container-divider-container
 						.ss-demo-container-divider
 					.col-md-6
-						center
+						.ss-center
 							input.sm-text-input.sm-text-input-l(placeholder="placeholder text")
 					.ss-demo-container-divider-container
 						.ss-demo-container-divider
 				.row
 					.col-md-6
-						center
+						.ss-center
 							input.sm-text-input.sm-text-input-m(placeholder="placeholder text")
 					.ss-demo-container-divider-container
 						.ss-demo-container-divider
 					.col-md-6
-						center
+						.ss-center
 							input.sm-text-input.sm-text-input-s(placeholder="placeholder text")
 			ss-demo-container-lower
 				= '<div class="sm-button sm-button-xl sm-button-default">...</div>'
@@ -34,14 +34,14 @@
 		ss-demo-container(id="input-group-button" title="Input group with button" description="yup.")
 			ss-demo-container-upper
 				.col-md-12
-					center
+					.ss-center
 						sm-input-group-button(placeholder="placeholder text" width="200px" submit="testFunction()")
 			ss-demo-container-lower
 				= '<sm-input-group-button placeholder="placeholder text" width="200px" submit="testFunction()"></sm-input-group-button>'
 		ss-demo-container(id="checkbox" title="Checkbox" description="yup again.")
 			ss-demo-container-upper
 				.col-md-12
-					center
-						sm-input-group-button(placeholder="placeholder text" width="200px" submit="testFunction()")
+					.ss-center
+						sm-select.fa.fa-chevron-down(ng-model="test" placeholder="default placeholder" options="test1,test2,test3")
 			ss-demo-container-lower
 				= '<sm-input-group-button placeholder="placeholder text" width="200px" submit="testFunction()"></sm-input-group-button>'
