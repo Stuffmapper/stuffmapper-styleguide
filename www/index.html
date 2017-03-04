@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ssApp">
+  <head>
+    <title>Stuffmapper Styleguide</title>
+    <base href="/styleguide/">
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/highlight/src/styles/default.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="css/styleguide-style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-animate/angular-animate.min.js"></script>
+    <script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/select2/dist/js/select2.min.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="libs/highlight/build/highlight.pack.js"></script>
+    <script src="https://use.typekit.net/lrm3jdv.js"></script>
+    <script>
+      try{Typekit.load({async:true});}catch(e){}
+      hljs.initHighlightingOnLoad();
+      var menu = JSON.parse(JSON.stringify([{"name":"Overview","children":["Introduction","Code-guidelines"]},{"name":"Design","children":["Animation","Border-radius","Box-shadow","Color-scheme","Icons","Layout","Typography"]},{"name":"Components","children":["Avatars","Buttons","Form-elements","Grid","Links","Lists","Modals","Popups"]},{"name":"Utility","children":["Aspect-ratio","Center-elements","Hide-elements","Layouts","Text-manipulation"]}]));
+      var menuItems = "".split(',');
+    </script>
+    <script src="js/main.js"></script>
+    <script id="/styleguide/partials/overview/introduction" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Introduction</h1>
+          <p>Yup.  This is the <a href="http://stuffmapper.com/stuff/get">Stuffmapper</a> styleguide alright.  You may feel like you are somewhere else, considering the lack of design on this page.  Well, look no further!  All <a href="http://stuffmapper.com/stuff/get">Stuffmapper</a> designs and components are listed in the sidebar on the left.</p>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/overview/code-guidelines" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Code guidelines</h1>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/design/animation" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Animation</h1>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/design/border-radius" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Border radius</h1>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/design/box-shadow" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Box shadow</h1>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/design/color-scheme" type="text/ng-template">
+      <style>.ss-bg-color-light-aqua{background-color:#48C0EB;color:#F5F7FA}.ss-bg-color-aqua{background-color:#33AEDC;color:#F5F7FA}.ss-bg-color-dark-aqua{background-color:#109BC6;color:#F5F7FA}.ss-bg-color-light-grass{background-color:#B1E271;color:#F5F7FA}.ss-bg-color-grass{background-color:#9FD661;color:#F5F7FA}.ss-bg-color-dark-grass{background-color:#8BC34A;color:#F5F7FA}.ss-bg-color-light-sunflower{background-color:#FFDB80;color:#F5F7FA}.ss-bg-color-sunflower{background-color:#FFCF47;color:#F5F7FA}.ss-bg-color-dark-sunflower{background-color:#F7BC31;color:#F5F7FA}.ss-bg-color-light-plum{background-color:#917EC4;color:#F5F7FA}.ss-bg-color-plum{background-color:#8065B9;color:#F5F7FA}.ss-bg-color-dark-plum{background-color:#6A4DA9;color:#F5F7FA}.ss-bg-color-light-grapefruit{background-color:#F2798B;color:#F5F7FA}.ss-bg-color-grapefruit{background-color:#ED5565;color:#F5F7FA}.ss-bg-color-dark-grapefruit{background-color:#DC4250;color:#F5F7FA}.ss-bg-color-light-charcoal{background-color:#555555;color:#F5F7FA}.ss-bg-color-charcoal{background-color:#474747;color:#F5F7FA}.ss-bg-color-dark-charcoal{background-color:#3C3B3D;color:#F5F7FA}.ss-bg-color-light-silver{background-color:#9D9D9E;color:#F5F7FA}.ss-bg-color-silver{background-color:#898B8C;color:#F5F7FA}.ss-bg-color-dark-silver{background-color:#78797A;color:#F5F7FA}.ss-bg-color-light-pewter{background-color:#CCD1D9;color:#F5F7FA}.ss-bg-color-pewter{background-color:#AAB2BE;color:#F5F7FA}.ss-bg-color-dark-pewter{background-color:#99A1AA;color:#F5F7FA}.ss-bg-color-light-fog{background-color:#F5F7FA;color:#3C3B3D}.ss-bg-color-fog{background-color:#E6E9ED;color:#3C3B3D}.ss-bg-color-dark-fog{background-color:#DCE1E5;color:#3C3B3D}</style>
+      <style>
+        .ss-color-scheme-container {
+        	width: 100%;
+        	display: inline-block;
+        	margin-bottom: 40px;
+        }
+        .ss-color-container {
+        	padding: 5px;
+        }
+      </style>
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1 class="ss-page-title">Color Scheme</h1>
+          <div id="brand-colors" class="row">
+            <h3 class="ss-demo-title">Brand Colors</h3>
+            <p class="ss-demo-description">These are our brand colors.  We will talk more about these later.</p>
+            <div class="col-md-3">
+              <div class="ss-color-scheme-container">
+                <div class="ss-color-container ss-bg-color-light-aqua">
+                  <div class="ss-color-scheme-hex">#48C0EB</div>
+                  <div class="ss-color-scheme-rgb">72, 192, 235</div>
+                  <div class="ss-color-scheme-name">light aqua</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-aqua">
+                  <div class="ss-color-scheme-hex">#33AEDC</div>
+                  <div class="ss-color-scheme-rgb">51, 174, 220</div>
+                  <div class="ss-color-scheme-name">aqua</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-dark-aqua">
+                  <div class="ss-color-scheme-hex">#109BC6</div>
+                  <div class="ss-color-scheme-rgb">16, 155, 198</div>
+                  <div class="ss-color-scheme-name">dark aqua</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="ss-color-scheme-container">
+                <div class="ss-color-container ss-bg-color-light-grass">
+                  <div class="ss-color-scheme-hex">#B1E271</div>
+                  <div class="ss-color-scheme-rgb">177, 226, 113</div>
+                  <div class="ss-color-scheme-name">light grass</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-grass">
+                  <div class="ss-color-scheme-hex">#9FD661</div>
+                  <div class="ss-color-scheme-rgb">159, 214, 97</div>
+                  <div class="ss-color-scheme-name">grass</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-dark-grass">
+                  <div class="ss-color-scheme-hex">#8BC34A</div>
+                  <div class="ss-color-scheme-rgb">139, 195, 74</div>
+                  <div class="ss-color-scheme-name">dark grass</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="ss-color-scheme-container">
+                <div class="ss-color-container ss-bg-color-light-sunflower">
+                  <div class="ss-color-scheme-hex">#FFDB80</div>
+                  <div class="ss-color-scheme-rgb">255, 219, 128</div>
+                  <div class="ss-color-scheme-name">light sunflower</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-sunflower">
+                  <div class="ss-color-scheme-hex">#FFCF47</div>
+                  <div class="ss-color-scheme-rgb">255, 207, 71</div>
+                  <div class="ss-color-scheme-name">sunflower</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-dark-sunflower">
+                  <div class="ss-color-scheme-hex">#F7BC31</div>
+                  <div class="ss-color-scheme-rgb">247, 188, 49</div>
+                  <div class="ss-color-scheme-name">dark sunflower</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="ss-color-scheme-container">
+                <div class="ss-color-container ss-bg-color-light-plum">
+                  <div class="ss-color-scheme-hex">#917EC4</div>
+                  <div class="ss-color-scheme-rgb">145, 126, 196</div>
+                  <div class="ss-color-scheme-name">light plum</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-plum">
+                  <div class="ss-color-scheme-hex">#8065B9</div>
+                  <div class="ss-color-scheme-rgb">128, 101, 185</div>
+                  <div class="ss-color-scheme-name">plum</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-dark-plum">
+                  <div class="ss-color-scheme-hex">#6A4DA9</div>
+                  <div class="ss-color-scheme-rgb">106, 77, 169</div>
+                  <div class="ss-color-scheme-name">dark plum</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="ss-color-scheme-container">
+                <div class="ss-color-container ss-bg-color-light-grapefruit">
+                  <div class="ss-color-scheme-hex">#F2798B</div>
+                  <div class="ss-color-scheme-rgb">242, 121, 139</div>
+                  <div class="ss-color-scheme-name">light grapefruit</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-grapefruit">
+                  <div class="ss-color-scheme-hex">#ED5565</div>
+                  <div class="ss-color-scheme-rgb">237, 85, 101</div>
+                  <div class="ss-color-scheme-name">grapefruit</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-dark-grapefruit">
+                  <div class="ss-color-scheme-hex">#DC4250</div>
+                  <div class="ss-color-scheme-rgb">220, 66, 80</div>
+                  <div class="ss-color-scheme-name">dark grapefruit</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="neutral-colors" class="row">
+            <h3 class="ss-demo-title">Neutral Colors</h3>
+            <p class="ss-demo-description">These are our neutral colors.  We will talk more about these later.</p>
+            <div class="col-md-3">
+              <div class="ss-color-scheme-container">
+                <div class="ss-color-container ss-bg-color-light-charcoal">
+                  <div class="ss-color-scheme-hex">#555555</div>
+                  <div class="ss-color-scheme-rgb">85, 85, 85</div>
+                  <div class="ss-color-scheme-name">light charcoal</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-charcoal">
+                  <div class="ss-color-scheme-hex">#474747</div>
+                  <div class="ss-color-scheme-rgb">71, 71, 71</div>
+                  <div class="ss-color-scheme-name">charcoal</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-dark-charcoal">
+                  <div class="ss-color-scheme-hex">#3C3B3D</div>
+                  <div class="ss-color-scheme-rgb">60, 59, 61</div>
+                  <div class="ss-color-scheme-name">dark charcoal</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="ss-color-scheme-container">
+                <div class="ss-color-container ss-bg-color-light-silver">
+                  <div class="ss-color-scheme-hex">#9D9D9E</div>
+                  <div class="ss-color-scheme-rgb">157, 157, 158</div>
+                  <div class="ss-color-scheme-name">light silver</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-silver">
+                  <div class="ss-color-scheme-hex">#898B8C</div>
+                  <div class="ss-color-scheme-rgb">137, 139, 140</div>
+                  <div class="ss-color-scheme-name">silver</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-dark-silver">
+                  <div class="ss-color-scheme-hex">#78797A</div>
+                  <div class="ss-color-scheme-rgb">120, 121, 122</div>
+                  <div class="ss-color-scheme-name">dark silver</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="ss-color-scheme-container">
+                <div class="ss-color-container ss-bg-color-light-pewter">
+                  <div class="ss-color-scheme-hex">#CCD1D9</div>
+                  <div class="ss-color-scheme-rgb">204, 209, 217</div>
+                  <div class="ss-color-scheme-name">light pewter</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-pewter">
+                  <div class="ss-color-scheme-hex">#AAB2BE</div>
+                  <div class="ss-color-scheme-rgb">170, 178, 190</div>
+                  <div class="ss-color-scheme-name">pewter</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-dark-pewter">
+                  <div class="ss-color-scheme-hex">#99A1AA</div>
+                  <div class="ss-color-scheme-rgb">153, 161, 170</div>
+                  <div class="ss-color-scheme-name">dark pewter</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="ss-color-scheme-container">
+                <div class="ss-color-container ss-bg-color-light-fog">
+                  <div class="ss-color-scheme-hex">#F5F7FA</div>
+                  <div class="ss-color-scheme-rgb">245, 247, 250</div>
+                  <div class="ss-color-scheme-name">light fog</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-fog">
+                  <div class="ss-color-scheme-hex">#E6E9ED</div>
+                  <div class="ss-color-scheme-rgb">230, 233, 237</div>
+                  <div class="ss-color-scheme-name">fog</div>
+                </div>
+                <div class="ss-color-container ss-bg-color-dark-fog">
+                  <div class="ss-color-scheme-hex">#DCE1E5</div>
+                  <div class="ss-color-scheme-rgb">220, 225, 229</div>
+                  <div class="ss-color-scheme-name">dark fog</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="ui-colors" class="row">
+            <h3 class="ss-demo-title">UI Colors</h3>
+            <p class="ss-demo-description">These are our ui colors.  We will talk more about these later.</p>
+            <div class="col-md-3">
+              <div class="ss-color-container ss-bg-color-aqua">
+                <div class="ss-color-scheme-global-name">default</div>
+                <div class="ss-color-scheme-global-color">aqua</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="ss-color-container ss-bg-color-grass">
+                <div class="ss-color-scheme-global-name">positive</div>
+                <div class="ss-color-scheme-global-color">grass</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="ss-color-container ss-bg-color-grapefruit">
+                <div class="ss-color-scheme-global-name">negative</div>
+                <div class="ss-color-scheme-global-color">grapefruit</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="ss-color-container ss-bg-color-sunflower">
+                <div class="ss-color-scheme-global-name">warning</div>
+                <div class="ss-color-scheme-global-color">sunflower</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/design/icons" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Icons</h1>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/design/layout" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Layout</h1>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/design/typography" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Typography</h1>
+          <div id="input-sizes" class="row">
+            <h3 class="ss-demo-title">Input sizes</h3>
+            <p class="ss-demo-description">Different size inputs</p>
+            <div class="ss-demo-container">
+              <div class="ss-demo-container-upper">
+                <div class="row">
+                  <div class="col-md-12">
+                    <center>
+                      <div class="sm-text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</div>
+                    </center>
+                  </div>
+                  <div class="ss-demo-container-divider-container">
+                    <div class="ss-demo-container-divider"></div>
+                  </div>
+                  <div class="col-md-12">
+                    <center>
+                      <div class="sm-text-l">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</div>
+                    </center>
+                  </div>
+                  <div class="ss-demo-container-divider-container">
+                    <div class="ss-demo-container-divider"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <center>
+                    <div class="sm-text-m">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</div>
+                  </center>
+                </div>
+                <div class="ss-demo-container-divider-container">
+                  <div class="ss-demo-container-divider"></div>
+                </div>
+                <div class="col-md-12">
+                  <center>
+                    <div class="sm-text-s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</div>
+                  </center>
+                </div>
+              </div>
+              <pre class="ss-demo-container-lower sm-code">&lt;div class=&quot;sm-text-xxl&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;sm-text-xl&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;sm-text-l&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;sm-text-m&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;sm-text-s&quot;&gt;...&lt;/div&gt;</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/components/avatars" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Introduction</h1>
+          <p>Yup.  This is the <a href="http://stuffmapper.com/stuff/get">Stuffmapper</a> styleguide alright.  You may feel like you are somewhere else, considering the lack of design on this page.  Well, look no further!  All <a href="http://stuffmapper.com/stuff/get">Stuffmapper</a> designs and components are listed in the sidebar on the left.</p>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/components/buttons" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1 class="ss-page-title">Buttons</h1>
+          <div id="button" class="row">
+            <h3 class="ss-demo-title">Button</h3>
+            <p class="ss-demo-description">we have one button</p>
+            <div class="ss-demo-container">
+              <div class="ss-demo-container-upper">
+                <div class="col-md-12">
+                  <div class="ss-center">
+                    <div class="sm-button sm-text-xxl sm-positive sm-button-default">button</div>
+                  </div>
+                </div>
+              </div>
+              <pre class="ss-demo-container-lower sm-code">&lt;div class=&quot;sm-button sm-text-xxl sm-button-default&quot;&gt;...&lt;/div&gt;
+</pre>
+            </div>
+          </div>
+          <div id="ghost-buttons" class="row">
+            <h3 class="ss-demo-title">Ghost Buttons</h3>
+            <p class="ss-demo-description">Ghost buttons should be used to signify optional, infrequent or subtle actions. The color options are specified with an additional class .bg--marvel--hover, .bg--orange--hover, .bg--negative--hover, etc.</p>
+            <div class="ss-demo-container">
+              <div class="ss-demo-container-upper">
+                <div class="col-md-3">
+                  <div class="ss-center">
+                    <div class="sm-button sm-text-xxl sm-button-default sm-button-ghost">default</div>
+                  </div>
+                </div>
+                <div class="ss-demo-container-divider-container">
+                  <div class="ss-demo-container-divider"></div>
+                </div>
+                <div class="col-md-3">
+                  <div class="ss-center">
+                    <div class="sm-button sm-text-xxl sm-button-positive sm-button-ghost">positive</div>
+                  </div>
+                </div>
+                <div class="ss-demo-container-divider-container">
+                  <div class="ss-demo-container-divider"></div>
+                </div>
+                <div class="col-md-3">
+                  <div class="ss-center">
+                    <div class="sm-button sm-text-xxl sm-button-warning sm-button-ghost">warning</div>
+                  </div>
+                </div>
+                <div class="ss-demo-container-divider-container">
+                  <div class="ss-demo-container-divider"></div>
+                </div>
+                <div class="col-md-3">
+                  <div class="ss-center">
+                    <div class="sm-button sm-text-xxl sm-button-negative sm-button-ghost">negative</div>
+                  </div>
+                </div>
+              </div>
+              <pre class="ss-demo-container-lower sm-code">&lt;div class=&quot;sm-button sm-button-l&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;sm-button sm-button-l&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;sm-button sm-button-l&quot;&gt;...&lt;/div&gt;
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/components/form-elements" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1 class="ss-page-title">Form Elements</h1>
+          <ss-demo-container id="input-sizes" title="Input sizes" description="Different size inputs">
+            <ss-demo-container-upper>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="ss-center">
+                    <input placeholder="placeholder text" class="sm-text-input sm-text-input-xl">
+                  </div>
+                </div>
+                <div class="ss-demo-container-divider-container">
+                  <div class="ss-demo-container-divider"></div>
+                </div>
+                <div class="col-md-6">
+                  <div class="ss-center">
+                    <input placeholder="placeholder text" class="sm-text-input sm-text-input-l">
+                  </div>
+                </div>
+                <div class="ss-demo-container-divider-container">
+                  <div class="ss-demo-container-divider"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="ss-center">
+                    <input placeholder="placeholder text" class="sm-text-input sm-text-input-m">
+                  </div>
+                </div>
+                <div class="ss-demo-container-divider-container">
+                  <div class="ss-demo-container-divider"></div>
+                </div>
+                <div class="col-md-6">
+                  <div class="ss-center">
+                    <input placeholder="placeholder text" class="sm-text-input sm-text-input-s">
+                  </div>
+                </div>
+              </div>
+            </ss-demo-container-upper>
+            <ss-demo-container-lower>&lt;div class=&quot;sm-button sm-button-xl sm-button-default&quot;&gt;...&lt;/div&gt;<br>&lt;div class=&quot;sm-button sm-button-l sm-button-default&quot;&gt;...&lt;/div&gt;<br>&lt;div class=&quot;sm-button sm-button-m sm-button-default&quot;&gt;...&lt;/div&gt;<br>&lt;div class=&quot;sm-button sm-button-s sm-button-default&quot;&gt;...&lt;/div&gt;
+            </ss-demo-container-lower>
+          </ss-demo-container>
+          <ss-demo-container id="input-group-button" title="Input group with button" description="yup.">
+            <ss-demo-container-upper>
+              <div class="col-md-12">
+                <div class="ss-center">
+                  <sm-input-group-button placeholder="placeholder text" width="200px" submit="testFunction()"></sm-input-group-button>
+                </div>
+              </div>
+            </ss-demo-container-upper>
+            <ss-demo-container-lower>&lt;sm-input-group-button placeholder=&quot;placeholder text&quot; width=&quot;200px&quot; submit=&quot;testFunction()&quot;&gt;&lt;/sm-input-group-button&gt;
+            </ss-demo-container-lower>
+          </ss-demo-container>
+          <ss-demo-container id="checkbox" title="Checkbox" description="yup again.">
+            <ss-demo-container-upper>
+              <div class="col-md-12">
+                <div class="ss-center">
+                  <sm-select ng-model="test" placeholder="default placeholder" options="test1,test2,test3" class="fa fa-chevron-down"></sm-select>
+                </div>
+              </div>
+            </ss-demo-container-upper>
+            <ss-demo-container-lower>&lt;sm-input-group-button placeholder=&quot;placeholder text&quot; width=&quot;200px&quot; submit=&quot;testFunction()&quot;&gt;&lt;/sm-input-group-button&gt;
+            </ss-demo-container-lower>
+          </ss-demo-container>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/components/grid" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Grid</h1>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/components/links" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Links</h1>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/components/lists" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Lists</h1>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/components/modals" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Modals</h1>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/components/popups" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Popups</h1>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/utility/aspect-ratio" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Aspect ratio</h1>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/utility/center-elements" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Center elements</h1>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/utility/hide-elements" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Hide elements</h1>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/utility/layouts" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Layouts</h1>
+        </div>
+      </div>
+    </script>
+    <script id="/styleguide/partials/utility/text-manipulation" type="text/ng-template">
+      <div class="ss-partial-container">
+        <div class="ss-content">
+          <h1>Text manipulation</h1>
+        </div>
+      </div>
+    </script>
+    <script>var stuffMapp = ssApp;</script>
+    <script src="js/directives.js"></script>
+    <script src="js/styleguide-directives.js"></script>
+  </head>
+  <body ng-controller="MainController">
+    <div id="wrapper">
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand"><a ui-sref="introduction">Stuffmapper</a></li>
+          <li ng-repeat="item in menu">
+            <button type="button" data-toggle="collapse" data-target="#ss-{{item.name.toLowerCase().replace(' ', '-')}}" class="ss-accordian-button">{{item.name}}</button>
+            <div class="collapse-container">
+              <ul id="ss-{{item.name.toLowerCase().replace(' ', '-')}}" class="collapse"><a ng-repeat="subItem in item.children" ui-sref="{{subItem.toLowerCase().replace(' ', '-')}}">
+                  <li>{{subItem.replace('-', ' ')}}</li></a></ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div ui-view class="col-lg-12"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

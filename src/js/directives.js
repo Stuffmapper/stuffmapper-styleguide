@@ -27,7 +27,6 @@ var element_directives = {
 				var originalFocus = $.fn.focus;
 				$.fn.focus = function(callback){
 					if(typeof callback != 'undefined'){
-						console.log(this);
 						if(this[0].className.indexOf('sm-text-input-group') > -1) {
 							return $(this[0]).children('.sm-text-input-container').children('input').focus(callback);
 						}
@@ -60,9 +59,9 @@ var element_directives = {
 			};
 			var onClick = function(e) {
 				smInputGroupInput.blur();
-				if(smInputGroupInput.val()) {
+				//if(smInputGroupInput.val()) {
 					scope.submit();
-				}
+				//}
 			};
 			var onKeydown = function(e) {
 				if(e.which === 27) smInputGroupInput.blur();
@@ -123,7 +122,6 @@ var element_directives = {
 			var onClick = function(e) {
 				//smInputGroupInput.blur();
 				if(smInputGroupInput.val()) {
-					console.log('help!');
 					scope.submit();
 				}
 			};
@@ -164,8 +162,6 @@ var element_directives = {
 		require: 'ngModel',
 		link: function(scope, element, attrs) {
 			// $(element).children(select).change(function(e) {
-			// 	console.log(this);
-			// 	console.log(e);
 			// });
 			element.on('$destroy', function() {
 			});

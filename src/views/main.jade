@@ -26,6 +26,7 @@ html(lang="en" class= htmlClassList ng-app="ssApp")
 			var menu = JSON.parse(JSON.stringify(!{menu}));
 			var menuItems = "#{menuItems}".split(',');
 		script(src="js/main.js")
+		include menu
 		script.
 			var stuffMapp = ssApp;
 		script(src="js/directives.js")

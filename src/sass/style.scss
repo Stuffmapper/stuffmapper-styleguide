@@ -73,7 +73,7 @@
 }
 .sm-button-ghost {
 	border: 2px solid $fog-dark;
-	background-color: transparent;
+	background-color: #fff;
 	color: $charcoal-dark;
 }
 .sm-button-ghost-solid {
@@ -167,18 +167,18 @@
 
 /* FORM ELEMENTS - START */
 .sm-text-input::-webkit-input-placeholder, .sm-text-area::-webkit-input-placeholder {
-	color: $pewter;
+	color: $charcoal-light;
 }
 .sm-text-input:-moz-placeholder, .sm-text-area:-moz-placeholder {
-	color: $pewter;
+	color: $charcoal-light;
 	opacity:  1;
 }
 .sm-text-input::-moz-placeholder, .sm-text-area::-moz-placeholder {
-	color: $pewter;
+	color: $charcoal-light;
 	opacity:  1;
 }
 .sm-text-input:-ms-input-placeholder, .sm-text-area::-moz-placeholder {
-	color: $pewter;
+	color: $charcoal-light;
 }
 .sm-text-input, .sm-text-area {
 	border-radius: 3px;
@@ -266,8 +266,6 @@
 	width: 26px;
 }
 .sm-text-input-group-m .sm-text-input-button {
-	height: 26px;
-	line-height: 26px;
 	width: 32px;
 }
 .sm-text-input-group-s .sm-text-input-button {
@@ -281,6 +279,7 @@
 	color: $pewter-light;
 	background-color: $fog-light;
 	cursor: default;
+	height: 100%;
 }
 .sm-text-input-button-border {
 	position: absolute;
@@ -293,6 +292,13 @@
 .sm-text-input-button-icon {
 	text-align: center;
 	width: 100%;
+	top: 50%;
+	position: absolute;
+	-webkit-transform: translate(0%, -50%);
+	-moz-transform: translate(0%, -50%);
+	-ms-transform: translate(0%, -50%);
+	-o-transform: translate(0%, -50%);
+	transform: translate(0%, -50%);
 }
 .sm-text-input-button-active .sm-text-input-button-border {
 	background-color: $aqua-light;
@@ -326,6 +332,10 @@
 	font-size: 12px;
 	line-height: 16px;
 }
+.sm-text-xs {
+	font-size: 10px;
+	line-height: 12px;
+}
 /* TYPOGRAPHY -  END  */
 
 /* CONTAINERS - START */
@@ -333,9 +343,9 @@
 .sm-tab-container {
 	position: absolute;
 	display: block;
-	top: 74px;
+	top: 40px;
 	left: 0px;
-	height: calc(100% - 74px);
+	height: calc(100% - 40px);
 	width: 100%;
 	z-index: 5;
 	overflow: hidden;
@@ -344,6 +354,8 @@
 		pointer-events: all;
 	}
 }
+
+
 
 .sm-background-semi-opaque {
 	position: absolute;
@@ -386,6 +398,7 @@
 		transform: translate3d(0px, -100%, 0px);
 	}
 }
+
 
 /* FILTER -  END  */
 
@@ -440,6 +453,7 @@
 	color: $pewter-dark;
 	font-family: proxima-nova;
 }
+
 .sm-select::before {
 	position: absolute;
 	top: 0px;
@@ -447,7 +461,7 @@
 	padding: 5px;
 	pointer-events: none;
 	border-left: 1px solid $fog-dark;
-	color: $pewter-dark;
+	color: $charcoal-dark;
 }
 
 .sm-select select:focus {
@@ -551,4 +565,19 @@ label:hover:before {
 	margin: 15px 20px;
 	width: calc(100% - 40px);
 	display: block;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 436px) {
+	.sm-tab-container {
+		top: 74px;
+		height: calc(100% - 74px);
+	}
 }
