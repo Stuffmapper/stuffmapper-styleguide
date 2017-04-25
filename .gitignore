@@ -50,8 +50,6 @@ www/libs/**
 **/.DS_Store
 
 hooks
-www
-src/js/lib/*
 plugins
 electron
 web
